@@ -1,0 +1,13 @@
+package aws.example.dynamodb.aws_dynamodb_examples;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

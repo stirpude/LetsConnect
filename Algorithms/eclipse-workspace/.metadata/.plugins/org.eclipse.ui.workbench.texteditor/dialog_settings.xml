@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="DynamoDB"/>
+		<item key="wrap" value="true"/>
+		<item key="incremental" value="false"/>
+		<list key="findhistory">
+			<item value="dynamoDB"/>
+			<item value="tableName"/>
+			<item value="client"/>
+			<item value="dynamolo"/>
+			<item value="DynamoDBScanExpression"/>
+			<item value="services.acmpca.model"/>
+			<item value=" DynamoDB dynamoDB = new DynamoDB(client);"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="575"/>
+		<item key="DIALOG_Y_ORIGIN" value="176"/>
+		<item key="DIALOG_WIDTH" value="290"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="484"/>
+		<item key="DIALOG_Y_ORIGIN" value="329"/>
+	</section>
+</section>

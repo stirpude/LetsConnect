@@ -1,0 +1,46 @@
+package com.amazonaws.samples;
+
+import javax.naming.Context;
+
+import com.amazonaws.handlers.RequestHandler;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
+import com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException;
+
+public class SaveUserHandler implements RequestHandler<UserRequest, UserResponse>{
+	
+	private DynamoDB dynamoDb;
+    private String DYNAMODB_TABLE_NAME = "User";
+    private Regions REGION = Regions.US_EAST_1;
+    
+    public UserResponse handleRequest(
+    		UserResponse personRequest, Context context) {
+    	  
+    	        this.initDynamoDbClient();
+    	 
+    	        persistData(personRequest);
+    	 
+    	        PersonResponse personResponse = new PersonResponse();
+    	        personResponse.setMessage("Saved Successfully!!!");
+    	        return personResponse;
+    	    }
+    
+    private PutItemOutcome persistData(UserRequest UserRequest) 
+    	      throws ConditionalCheckFailedException {
+    	        return this.dynamoDb.getTable(DYNAMODB_TABLE_NAME)
+    	          .putItem(
+    	            new PutItemSpec().withItem(new Item()
+    	              .withString("name", UserRequest.getName());
+    	           
+    	    }
+    	 
+    	    private void initDynamoDbClient() {
+    	        AmazonDynamoDBClient client = new AmazonDynamoDBClient();
+    	        client.setRegion(Region.getRegion(REGION));
+    	        this.dynamoDb = new DynamoDB(client);
+    	    }
+    	 
+	
+
+}

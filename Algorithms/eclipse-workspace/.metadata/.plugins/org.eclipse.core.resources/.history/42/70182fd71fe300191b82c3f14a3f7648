@@ -1,0 +1,5 @@
+package com.amazonaws.samples;
+
+public class SaveUserHandler implements RequestHandler<UserRequest, UserResponse>{
+
+}

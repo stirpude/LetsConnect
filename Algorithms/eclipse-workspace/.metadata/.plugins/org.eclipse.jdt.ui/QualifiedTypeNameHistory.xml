@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.tools.jdeps.Graph"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.lambda.runtime.RequestHandler"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.lambda.runtime.Context"/>
+    <fullyQualifiedTypeName name="linear.IntNode"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="linear.Product"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="com.amazonaws.lambda.demo.ResponseDetails"/>
+    <fullyQualifiedTypeName name="com.amazonaws.lambda.demo.Hello"/>
+    <fullyQualifiedTypeName name="com.amazonaws.lambda.demo.RequestDetails"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.acmpca.model.ResourceNotFoundException"/>
+    <fullyQualifiedTypeName name="com.amazonaws.Request"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.AmazonDynamoDB"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.appstream.model.User"/>
+    <fullyQualifiedTypeName name="com.amazonaws.samples.Request"/>
+    <fullyQualifiedTypeName name="com.amazonaws.samples.User"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute"/>
+    <fullyQualifiedTypeName name="com.amazonaws.handlers.RequestHandler"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDB"/>
+    <fullyQualifiedTypeName name="com.amazonaws.regions.Regions"/>
+    <fullyQualifiedTypeName name="javax.naming.Context"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.PutItemOutcome"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.Item"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.spec.PutItemSpec"/>
+    <fullyQualifiedTypeName name="com.amazonaws.partitions.model.Region"/>
+    <fullyQualifiedTypeName name="com.amazonaws.samples.UserRequest"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient"/>
+    <fullyQualifiedTypeName name="com.amazonaws.regions.Region"/>
+</qualifiedTypeNameHistroy>

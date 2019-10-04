@@ -1,0 +1,14 @@
+package com.amazonaws.samples;
+
+import com.amazonaws.handlers.RequestHandler;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDB;
+
+public class SaveUserHandler implements RequestHandler<UserRequest, UserResponse>{
+	
+	private DynamoDB dynamoDb;
+    private String DYNAMODB_TABLE_NAME = "User";
+    private Regions REGION = Regions.US_EAST_1;
+	
+
+}

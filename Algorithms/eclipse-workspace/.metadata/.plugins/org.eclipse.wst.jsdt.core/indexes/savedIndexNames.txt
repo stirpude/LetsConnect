@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/Users/Apple/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+379023192.index
+3424228924.index
+168974410.index
+2896591809.index
+1799104022.index
+803274819.index
+870263474.index

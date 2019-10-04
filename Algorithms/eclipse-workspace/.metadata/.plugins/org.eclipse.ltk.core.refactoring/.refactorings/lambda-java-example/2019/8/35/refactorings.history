@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;AWSLambdaExample/src/main/java/com.amazonaws.lambda.demo&apos;&#x0A;- Original project: &apos;lambda-java-example&apos;&#x0A;- Destination element: &apos;AWSLambdaExample/src/main/java/com.amazonaws.lambda.demo&apos;&#x0A;- Original elements:&#x0A;     example.RequestDetails.java&#x0A;     example.ResponseDetails.java" description="Copy compilation units" destination="=AWSLambdaExample/src\/main\/java&lt;com.amazonaws.lambda.demo" element1="/src\/main\/java&lt;example{RequestDetails.java" element2="/src\/main\/java&lt;example{ResponseDetails.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1567089121179" units="2" version="1.0"/>
+</session>

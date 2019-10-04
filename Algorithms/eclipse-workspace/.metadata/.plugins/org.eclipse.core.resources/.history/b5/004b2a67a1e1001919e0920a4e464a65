@@ -1,0 +1,218 @@
+package com.amazonaws.samples;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
+//import com.amazonaws.services.acmpca.model.ResourceNotFoundException;
+//import com.amazonaws.services.appstream.model.User;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.model.KeySchemaElement;
+import com.amazonaws.services.dynamodbv2.model.KeyType;
+import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
+import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.DeleteItemOutcome;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Item;
+import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.document.UpdateItemOutcome;
+import com.amazonaws.services.dynamodbv2.document.spec.DeleteItemSpec;
+import com.amazonaws.services.dynamodbv2.document.spec.UpdateItemSpec;
+import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
+import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
+import com.amazonaws.services.dynamodbv2.model.ReturnValue;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
+
+
+public class DynamoExample {
+	
+	static AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard().build();
+    static DynamoDB dynamoDB = new DynamoDB(client);
+    
+    //static String tableName = "Users";
+	
+
+	public static void main(String[] args) throws Exception {
+		
+		
+		
+		//retrieveItem();
+		
+		
+
+        
+
+        /* DynamoDB dynamoDB = new DynamoDB(client);
+
+        String tableName = "Users";
+
+        try {
+            System.out.println("Attempting to create table; please wait...");
+            Table table = dynamoDB.createTable(tableName,
+                Arrays.asList(new KeySchemaElement("id", KeyType.HASH), // Partition
+                                                                          // key
+                    new KeySchemaElement("name", KeyType.RANGE)), // Sort key
+                Arrays.asList(new AttributeDefinition("id", ScalarAttributeType.N),
+                    new AttributeDefinition("name", ScalarAttributeType.S)),
+                new ProvisionedThroughput(10L, 10L));
+            table.waitForActive();
+            System.out.println("Success.  Table status: " + table.getDescription().getTableStatus());
+
+        }
+        catch (Exception e) {
+            System.err.println("Unable to create table: ");
+            System.err.println(e.getMessage());
+            
+            
+        }
+		
+		System.out.println("Hi This is me");
+		
+
+    }*/
+	
+//	public String dynamoTest() {
+//		
+//		System.out.println("I am in dynamotest");
+//		return " shruti";
+//		
+//	}
+//	
+	/*public static Object handleRequest (Request request,Context context) throws ResourceNotFoundException {
+		
+		AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
+		DynamoDBMapper mapper = new DynamoDBMapper(client);
+		User user = null;
+		 
+		switch(request.getHttpMethod()) {
+		
+		case GET :
+			user = mapper.load(User.class, request.getId());
+			if(user==null) {
+				throw new ResourceNotFoundException("Resource not found" +request.getId() );
+			}
+			return user;
+		 case  POST:
+			user = request.getUser();
+			mapper.save(user);
+			return user;
+	    default :
+	    	break;
+		
+		}
+		
+		return null;
+	}*/
+		
+		//testCRUDOperations();
+	    System.out.println("Example complete!");
+	    
+
+}
+	
+	/*private static void retrieveItem() {
+		
+        Table table = dynamoDB.getTable(tableName);
+
+        try {
+
+            Item item = table.getItem("id",1);
+
+            System.out.println("Printing item after retrieving it...."+item);
+           // System.out.println(item.toJSONPretty());
+
+        }
+        catch (Exception e) {
+            System.err.println("GetItem failed.");
+            System.err.println(e.getMessage());
+        }
+
+    }*/
+	
+	
+    
+    
+    @DynamoDBTable(tableName = "Users")
+    public static class User {
+        private Integer id;
+        private String name;
+        
+
+        // Partition key
+        @DynamoDBHashKey(attributeName = "Id")
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        @DynamoDBAttribute(attributeName = "name")
+        public String getName() {
+            return name;
+        }
+
+        public void setTitle(String name) {
+            this.name = name;
+        }
+        
+        
+        
+    }
+    
+    public String testCRUDOperations() {
+    	System.out.println("Example !");
+    	
+    	
+    	Table table = dynamoDB.getTable("Users");
+        System.out.println("Item retrieved:"+table.getItem("id",1));
+        Item item = new Item().withPrimaryKey("Id", 120).withString("name", "Book 120 Title");
+		table.putItem(item);
+
+       // User ObjUser = new User();
+        DynamoDBMapper mapper = new DynamoDBMapper(client);
+        System.out.println("Example 22!");
+
+        // Retrieve the item.
+        User itemRetrieved = mapper.load(User.class, 1);
+        System.out.println("Example 33");
+
+        System.out.println("Item retrieved:");
+        System.out.println(itemRetrieved);
+        return itemRetrieved.getName();
+        
+    }
+	
+	
+	
+    
+	
+}
+	
+	
